@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   line-height: 1.6;
   margin: 0;
   padding: 0;
@@ -28,14 +28,64 @@ img {
   .text-justify {
     text-align: justify;
   }
-  .img-perfil {
-    width: 150px;
-    height: 150px;
-    object-fit: scale-down; /* Mantiene la proporción de la imagen */
-    border-radius: 50%;  /* Hace que sea circular */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* sombra suave para destacar */
-    margin: 40px auto; /* centrado */
-  }
+  /* Estilos para la imagen de perfil profesional */
+.profile-pic-container {
+  position: relative;
+  display: inline-block;
+  max-width: 250px;
+}
+
+.profile-pic {
+  width: 100%;
+  height: auto;
+  border: 5px solid #00adb5;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.profile-pic:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0, 173, 181, 0.3);
+}
+
+.profile-badge {
+  position: absolute;
+  bottom: -15px;
+  right: -15px;
+  background: #303131;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 2;
+  border: 2px solid #00adb5;
+}
+
+.profile-badge i {
+  color: #00adb5;
+  margin-right: 5px;
+}
+
+/* Efecto de marco decorativo opcional */
+.profile-pic-container::before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  border: 2px dashed rgba(0, 173, 181, 0.6);
+  border-radius: 50%;
+  top: -10px;
+  left: -10px;
+  z-index: 0;
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  100% { transform: rotate(360deg); }
+}
   .fade-in-up {
     opacity: 0;
     transform: translateY(50px);
@@ -95,12 +145,47 @@ header {
   display: flex; /* Cambié display: -moz-deck por display: flex */
   justify-content: space-between; /* Alinea los elementos con espacio igual entre ellos */
   align-items: center; /* Centra verticalmente los elementos */
-  flex-direction: row; /* Los coloca en una fila */
+  flex-wrap: wrap;
+  gap: 1rem; /* Espacio entre los elementos */
   margin-top: 2rem;
   padding: 1rem;
   border-radius: 10px;
   background-color: #303131;
+
 }
+/* Grupo de botones de navegación (izquierda) */
+.container-links > div:first-child {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Grupo de botones sociales (derecha) */
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* --- Responsive (Móviles) --- */
+@media (max-width: 992px) {
+  .container-links {
+    flex-direction: column; /* Apila verticalmente */
+    align-items: stretch; /* Ocupa todo el ancho */
+  }
+
+  .container-links > div:first-child,
+  .social-icons {
+    width: 100%; /* Ocupan todo el ancho disponible */
+  }
+
+  /* Ajuste para botones individuales en móviles */
+  .nav-btn, 
+  .social-icons a {
+    flex: 1 1 auto; /* Crece y se ajusta */
+    min-width: 120px; /* Ancho mínimo para legibilidad */
+    text-align: center;
+  }
 
 .container-links a {
   margin-right: 1rem; /* Agrega espacio entre los enlaces */
@@ -116,6 +201,22 @@ header {
   align-items: center; /* Centra los iconos verticalmente */
   font-size: 2rem; /* Tamaño de fuente para los enlaces */
 }
+.container-links > div {
+  width: 100%; /* Asegura que los div hijos ocupen el 100% del ancho */
+  margin-bottom: 1rem; /* Espacio entre los grupos de botones */
+}
+.social-icons {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los botones sociales se ajusten */
+  gap: 0.5rem; /* Espacio entre botones */
+}
+
+.social-icons a {
+  flex: 1; /* Distribuye el espacio equitativamente */
+  min-width: fit-content; /* Evita que los botones se hagan demasiado pequeños */
+  text-align: center;
+}
+
 
 .card {
   background-color: #1f1f1f;
@@ -185,41 +286,176 @@ footer {
 }
 .navbar li {
   display: inline;
+}.nav-btn {
+  
+  /* Colores base */
+  
+  color: #2fa3ff;
+  background:linear-gradient(145deg,#2d2d2d 0%,#232323 50%,#1a1a1a 90%,rgba(25, 203, 242, 0.15) 100%);
+ 
+  /* Estilos de texto */
+  padding: 15px 30px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  
+  /* Efectos 3D */
+  transform: translateY(0);
+  box-shadow: 
+    0 4px 15px rgba(0,0,0,0.2),
+    0 0 0 0px rgba(47, 163, 255, 0);
+
 }
-.navbar a {
-  text-decoration: none;
-  color: #fff;
-  padding: 0.5rem 1rem;
-  background: #444;
-  border-radius: 5px;
-  transition: background 0.3s;
+
+.nav-btn:hover {
+    background-color: #383838;
+    color: #38b6ff;
+    transform: translateY(-3px);
+    box-shadow: 
+      0 8px 25px rgba(47, 163, 255, 0.25),
+      0 0 0 1px rgba(47, 163, 255, 0.15);
+    
+    /* Efecto neón sutil */
+    text-shadow: 0 0 8px rgba(47, 163, 255, 0.3);
+  }
+  
+  /* Efecto al hacer clic */
+  .boton-nav:active {
+    transform: translateY(1px);
+    transition: all 0.1s ease;
+    box-shadow: 
+      0 2px 8px rgba(47, 163, 255, 0.15),
+      inset 0 2px 4px rgba(0,0,0,0.2);
+  }
+  
+  /* Responsive para móviles */
+  @media (max-width: 768px) {
+    .contenedor-botones {
+      flex-direction: column;
+      gap: 15px;
+      padding: 1.5rem;
+    }
+    
+    .boton-nav {
+      width: 100%;
+      margin: 0;
+    }
+  
+
+/* Estilos para las barras de habilidad */
+.skill-item {
+  background-color: rgba(48, 49, 49, 0.7);
+  padding: 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
-.navbar a:hover {
-  background: #666;
+
+.skill-item:hover {
+  background-color: rgba(48, 49, 49, 0.9);
+  transform: translateY(-3px);
 }
-/* Navbar estructura */
-.navbar {
+.cert-card {
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  height: 100%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+}
+.skill-name {
+  font-weight: 600;
+  color: #fff;
+  display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  margin-top: 1rem;
 }
-.certifications-title {
+
+.skill-percent {
+  color: #00adb5;
   font-weight: bold;
-  margin-bottom: 2rem;
 }
 
-.certification-card {
-  width: 100%;
-  max-width: 400px;
-  transition: transform 0.3s ease;
+.progress {
+  background-color: #303131;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
-.certification-card:hover {
-  transform: scale(1.03);
-  background-color: #1a1a1a;
+.progress-bar {
+  background-color: #00adb5;
+  transition: width 1.5s ease-in-out;
 }
+
+
+/* Estilos para certificaciones en fila */
+.certifications-wide {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+.cert-wide {
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  min-width: 350px; /* Ancho mínimo para mantener tamaño */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.cert-wide:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 173, 181, 0.3);
+}
+
+/* Scroll horizontal solo en móviles */
+@media (max-width: 991.98px) {
+  .row.flex-nowrap {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: #00adb5 #303131;
+    padding-bottom: 15px;
+  }
+  
+  .row.flex-nowrap::-webkit-scrollbar {
+    height: 6px;
+  }
+  
+  .row.flex-nowrap::-webkit-scrollbar-track {
+    background: #303131;
+    border-radius: 10px;
+  }
+  
+  .row.flex-nowrap::-webkit-scrollbar-thumb {
+    background-color: #00adb5;
+    border-radius: 10px;
+  }
+  
+  .flex-shrink-0 {
+    flex-shrink: 0;
+  }
+}
+.carousel-control-prev {
+  left: -3%;
+}
+
+.carousel-control-next {
+  right: -3%;
+}
+
+/* En pantallas grandes, mostrar normalmente */
+@media (min-width: 992px) {
+  .row.flex-nowrap {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+
 
 
 .menu-links {
@@ -292,4 +528,47 @@ footer {
 
 .social-links img:hover {
   transform: scale(1.2);
+}
+  }
+  /* Estilos para el formulario */
+#contactForm {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: rgba(48, 49, 49, 0.7);
+  border-radius: 10px;
+  border: 1px solid rgba(0, 173, 181, 0.3);
+}
+
+#contactForm:hover {
+  border-color: #00adb5;
+}
+
+#contactForm .form-control {
+  background-color: #303131;
+  border: 1px solid #495057;
+  color: white;
+}
+
+#contactForm .form-control:focus {
+  background-color: #303131;
+  border-color: #00adb5;
+  color: white;
+  box-shadow: 0 0 0 0.25rem rgba(0, 173, 181, 0.25);
+}
+
+#contactForm .invalid-feedback {
+  color: #ff6b6b;
+}
+
+#contactForm .btn-primary {
+  background-color: #00adb5;
+  border-color: #00adb5;
+  transition: all 0.3s ease;
+}
+
+#contactForm .btn-primary:hover {
+  background-color: #008c94;
+  border-color: #008c94;
+  transform: translateY(-2px);
 }

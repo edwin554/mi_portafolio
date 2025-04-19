@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
 </head>
 <body class="bg-dark text-white">
@@ -20,11 +21,12 @@
 
   <div class="container-links">
     <div>
-      <a href="#about" class="btn btn-dark text-info me-3 fs-5">Sobre Mi</a>
-      <a href="#projects" class="btn btn-dark text-info me-3 fs-5">Experiencia</a>
-      <a href="#skills" class="btn btn-dark text-info me-3 fs-5">Herramientas</a>
-      <a href="#contact" class="btn btn-dark text-info me-3 fs-5">Contacto</a>
-      <a href="#certifications" class="btn btn-dark text-info me-3 fs-5">Logros</a>
+      <a href="#about" class="btn btn-dark text-info me-3 fs-5 nav-btn">Sobre Mi</a>
+      <a href="#projects" class="btn btn-dark text-info me-3 fs-5 nav-btn">Experiencia</a>
+      <a href="#skills" class="btn btn-dark text-info me-3 fs-5 nav-btn">Herramientas</a>
+      <a href="#contact" class="btn btn-dark text-info me-3 fs-5 nav-btn">Contacto</a>
+      <a href="#certifications" class="btn btn-dark text-info me-3 fs-5 nav-btn">Logros</a>
+      
     </div>
   
     <!-- Íconos de redes sociales -->
@@ -59,7 +61,7 @@
     <div class="custom-hero-overlay" data-aos="fade-up" data-aos-duration="1500">
       <h1>Hola, soy Edwin Chavarro Trujillo</h1>
       <p>QA especializado en pruebas funcionales y automatizadas</p>
-      <a href="#about" class="scroll-btn mt-4">↓ Desplázate hacia abajo</a>
+      <a href="#contact" class="scroll-btn mt-4">↓ Desplázate hacia abajo</a>
 
     </div>
     
@@ -69,23 +71,38 @@
 
 
 
-<!-- SOBRE MÍ -->
+<!-- SOBRE MÍ - Versión Mejorada -->
 <section id="about" class="container my-5 fade-in-up">
-  <div class="row">
-    <div class="col-md-8">
-      <h2>Sobre mí</h2>
+  <div class="row align-items-center">
+    <div class="col-md-8 order-md-1 order-2">
+      <h2 class="mb-4">Sobre mí</h2>
       <p class="text-justify">
         Soy un apasionado de la tecnología y el aprendizaje continuo. Me encanta enfrentar nuevos desafíos y aprender nuevas herramientas y tecnologías.
         Me considero una persona proactiva, con habilidades para trabajar en equipo y resolver problemas. Busco siempre mejorar mis habilidades y contribuir al éxito de los proyectos en los que participo.
         Analista de pruebas de software con conocimientos en pruebas funcionales y automatizadas,
         con más de 4 años de experiencia aplicando diferentes herramientas y tecnologías.
-        Apasionado por la tecnología y el aprendizaje continuo.
       </p>
+      <!-- Añade habilidades clave como lista -->
+      <div class="skills-highlights mt-4">
+        <h5>Habilidades clave:</h5>
+        <ul class="list-inline">
+          <li class="list-inline-item badge bg-info text-dark me-1 mb-1">Automatización de pruebas</li>
+          <li class="list-inline-item badge bg-info text-dark me-1 mb-1">Cypress</li>
+          <li class="list-inline-item badge bg-info text-dark me-1 mb-1">Serenity BDD</li>
+          <li class="list-inline-item badge bg-info text-dark me-1 mb-1">K6</li>
+        </ul>
+      </div>
     </div>
-    <div class="img-perfil">
-     
-      <img src="https://media.licdn.com/dms/image/v2/C4E03AQEd0vTYk2jAMQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1634180925725?e=1750291200&v=beta&t=bVMBfLAUkfkCliZd49GN9bQ0jMNkZbjO1pBdT1HcV5g" alt="Edwin Chavarro Trujillo" class="img-perfil" />
-
+    
+    <div class="col-md-4 order-md-2 order-1 mb-4 mb-md-0 text-center">
+      <div class="profile-pic-container">
+        <img src="https://media.licdn.com/dms/image/v2/C4E03AQEd0vTYk2jAMQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1634180925725?e=1750291200&v=beta&t=bVMBfLAUkfkCliZd49GN9bQ0jMNkZbjO1pBdT1HcV5g" 
+             alt="Edwin Chavarro Trujillo" 
+             class="profile-pic img-fluid rounded-circle shadow-lg" />
+        <div class="profile-badge">
+          <i class="bi bi-award-fill"></i> QA Engineer
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -102,11 +119,14 @@
       <div class="row justify-content-center g-4 px-3">
         <div class="col-md-6">
           <div class="card text-bg-dark">
-            <div class="card-body">
-              <h5 class="card-title d-flex justify-content-center align-items-center fs-1 position-relative">
-                <img src="https://neoris.com/documents/20126/0/logo-neoris-epam-an-company.png" alt="Neoris Logo" width="100" height="50" class="position-absolute start-0">Neoris
-              </h5>
-              <p class="card-text">
+            <div class="card-body position-relative">
+              <!-- Logo a la izquierda -->
+              <img src="../portafolio-edwin-standalone/imgs/NEORIS-logo-light.png" alt="Neoris" width="50" class="position-absolute top-0 start-0 m-3">
+          
+              <!-- Título centrado -->
+              <h5 class="card-title text-center fs-1">Neoris</h5>
+          
+              <p class="card-text mt-4">
                 Participación en diferentes proyectos realizando ciclos de pruebas funcionales, de APIs y automatizadas
                 en entornos ágiles, utilizando herramientas de gestión como Azure DevOps y Jira. 
                 Mantenimiento de scripts de automatización con Serenity BDD, Gherkin y Gradle. 
@@ -114,12 +134,13 @@
               </p>
             </div>
           </div>
+          
         </div>
         <div class="col-md-6">
           <div class="card text-bg-dark">
             <div class="card-body">
               <h5 class="card-title d-flex justify-content-center align-items-center fs-1 position-relative">
-                <img src="https://www.syntax.com/wp-content/uploads/2023/12/Syntax-logo-fullcolor-horiz-1920x305.png" alt="Syntax Logo" width="100" height="40" class="position-absolute start-0">
+                
                 Syntax
               </h5>
               <p class="card-text">
@@ -140,7 +161,7 @@
           <div class="card text-bg-dark">
             <div class="card-body">
               <h5 class="card-title d-flex align-items-center justify-content-center gap-2 fs-1">
-                <img src="https://media.licdn.com/dms/image/C4D0BAQFqBNWsHu0Brw/company-logo_200_200/0/1630605174230?e=1722470400&v=beta&t=HOZANdAO5LShOzSxnk3Rm7MpfiwW4D-SZjLXPVLTLrQ" alt="Zeus Logo" width="40" height="40">
+
                 Zeus Technology
               </h5>
               <p class="card-text">
@@ -155,7 +176,7 @@
           <div class="card text-bg-dark">
             <div class="card-body">
               <h5 class="card-title d-flex align-items-center justify-content-center gap-2 fs-1">
-                <img src="https://media.licdn.com/dms/image/C4E0BAQHCDLZf1zZgTw/company-logo_200_200/0/1643921322469?e=1722470400&v=beta&t=zFMXipg2jS8CW4CnNi3P4GSyWihPbQsP-vJckmJm-NY" alt="N5 Now Logo" width="40" height="40">
+                
                 N5 Now
               </h5>
               <p class="card-text">
@@ -168,10 +189,8 @@
       </div>
     </div>
   </div>
-</div>
-
-  <!-- Controles del Carrusel -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarousel" data-bs-slide="prev"  title="Anterior" style="left: -50px;">
+   <!-- Controles del Carrusel -->
+   <button class="carousel-control-prev" type="button" data-bs-target="#projectsCarousel" data-bs-slide="prev"  title="Anterior" style="left: -50px;">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Anterior</span>
   </button>
@@ -180,11 +199,112 @@
     <span class="visually-hidden">Siguiente</span>
   </button>
 </div>
+</div>
+
+ 
+
+
+<!-- HERRAMIENTAS CON BARRAS DE PROGRESO -->
+<section id="skills" class="container my-5">
+  <h2 class="mb-4">Herramientas y Tecnologías</h2>
+  <p class="text-center mb-5">Mis habilidades técnicas y nivel de dominio</p>
+  
+  <div class="row">
+    <!-- Columna 1 -->
+    <div class="col-md-6">
+      <!-- Cypress -->
+      <div class="skill-item mb-4">
+        <div class="d-flex justify-content-between mb-2">
+          <span class="skill-name">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cypressio/cypressio-original.svg" alt="Cypress" width="24" class="me-2">
+            Cypress
+          </span>
+          <span class="skill-percent">85%</span>
+        </div>
+        <div class="progress" style="height: 8px;">
+          <div class="progress-bar bg-info" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+      
+      <!-- Serenity BDD -->
+      <div class="skill-item mb-4">
+        <div class="d-flex justify-content-between mb-2">
+          <span class="skill-name">
+            <img src="https://avatars.githubusercontent.com/u/9455201?s=280&v=4" alt="Serenity BDD" width="24" class="me-2">
+            Serenity BDD
+          </span>
+          <span class="skill-percent">75%</span>
+        </div>
+        <div class="progress" style="height: 8px;">
+          <div class="progress-bar bg-info" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+      
+      <!-- Postman -->
+      <div class="skill-item mb-4">
+        <div class="d-flex justify-content-between mb-2">
+          <span class="skill-name">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman" width="24" class="me-2">
+            Postman
+          </span>
+          <span class="skill-percent">90%</span>
+        </div>
+        <div class="progress" style="height: 8px;">
+          <div class="progress-bar bg-info" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Columna 2 -->
+    <div class="col-md-6">
+      <!-- K6 -->
+      <div class="skill-item mb-4">
+        <div class="d-flex justify-content-between mb-2">
+          <span class="skill-name">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/k6/k6-original.svg" alt="K6" width="24" class="me-2">
+            K6
+          </span>
+          <span class="skill-percent">70%</span>
+        </div>
+        <div class="progress" style="height: 8px;">
+          <div class="progress-bar bg-info" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+      
+      <!-- Azure DevOps -->
+      <div class="skill-item mb-4">
+        <div class="d-flex justify-content-between mb-2">
+          <span class="skill-name">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure DevOps" width="24" class="me-2">
+            Azure DevOps
+          </span>
+          <span class="skill-percent">80%</span>
+        </div>
+        <div class="progress" style="height: 8px;">
+          <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+      
+      <!-- Git/GitHub -->
+      <div class="skill-item mb-4">
+        <div class="d-flex justify-content-between mb-2">
+          <span class="skill-name">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="24" class="me-2">
+            Git/GitHub
+          </span>
+          <span class="skill-percent">95%</span>
+        </div>
+        <div class="progress" style="height: 8px;">
+          <div class="progress-bar bg-info" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 <!-- HERRAMIENTAS -->
 <section id="skills" class="container my-5">
-  <h2>Herramientas y Tecnologías</h2>
+  
   <div class="row g-4 mt-3">
     <!-- Fila superior con 3 herramientas -->
     <div class="col-md-4 text-center">
@@ -249,112 +369,214 @@
 </section>
 
 
+<!-- CERTIFICACIONES EN CARRUSEL -->
+<section id="certifications" class="certifications-carousel py-5">
+  <div class="container-xxl px-4 px-lg-5">
+    <h2 class="text-center mb-5 display-3 fw-bold">Mis Certificaciones Profesionales</h2>
+    
+    <div id="certificationsCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <!-- Certificación 1 - Cypress -->
+        <div class="carousel-item active">
+          <div class="col-12 col-lg-10 col-xl-8 mx-auto">
+            <div class="cert-card bg-dark text-white p-4 h-100 rounded-4 border border-info border-opacity-25">
+              <div class="d-flex justify-content-between align-items-start mb-3">
+                <img src="../portafolio-edwin-standalone/imgs/images.jpeg" alt="Cypress" style="height: 60px;">
+                <div class="platform-info ms-3">
+                  <img src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg" alt="Udemy" style="height: 30px;" class="mb-2">
+                  <div class="badge bg-info text-dark fs-6">Feb 2023</div>
+                </div>
+              </div>
+              
+              <h3 class="text-info mb-3">Automatización Web con Cypress</h3>
+              
+              <p class="mb-3">Curso completo de automatización con Cypress, incluyendo mejores prácticas y reporting.</p>
+              
+              <div class="skills-list mb-3">
+                <h6 class="text-muted">Habilidades:</h6>
+                <ul class="list-unstyled">
+                  <li class="mb-1"><i class="bi bi-check-circle-fill text-info me-2"></i>Pruebas E2E</li>
+                  <li class="mb-1"><i class="bi bi-check-circle-fill text-info me-2"></i>Page Objects Model</li>
+                  <li class="mb-1"><i class="bi bi-check-circle-fill text-info me-2"></i>Custom Commands</li>
+                  <li class="mb-1"><i class="bi bi-check-circle-fill text-info me-2"></i>Reporting</li>
+                  <li class="mb-1"><i class="bi bi-check-circle-fill text-info me-2"></i>Arquitectura y ejecución</li>
+                </ul>
+              </div>
+              
+              <div class="d-grid gap-2 mt-auto">
+                <a href="#" class="btn btn-outline-info">
+                  <i class="bi bi-file-earmark-pdf me-2"></i> Certificado
+                </a>
+                <a href="#" class="btn btn-outline-light">
+                  <i class="bi bi-link-45deg me-2"></i> Ver Curso
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <!-- Certificación 2 - K6 -->
+        <div class="carousel-item">
+          <div class="col-12 col-lg-10 col-xl-8 mx-auto">
+            <div class="cert-card bg-dark text-white p-4 h-100 rounded-4 border border-info border-opacity-25">
+              <div class="d-flex justify-content-between align-items-start mb-3">
+                <img src="../portafolio-edwin-standalone/imgs/K6-logo.svg.png" alt="K6" style="height: 60px;">
+                <div class="platform-info ms-3">
+                  <img src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg" alt="Udemy" style="height: 30px;" class="mb-2">
+                  <div class="badge bg-info text-dark fs-6">Mar 2023</div>
+                </div>
+              </div>
+              
+              <h3 class="text-info mb-3">Pruebas de Rendimiento con K6</h3>
+              
+              <p class="mb-3">Dominio de pruebas de carga y estrés con K6, incluyendo scripting avanzado.</p>
+              
+              <div class="skills-list mb-3">
+                <h6 class="text-muted">Habilidades:</h6>
+                <ul class="list-unstyled">
+                  <li class="mb-1"><i class="bi bi-check-circle-fill text-info me-2"></i>Pruebas de carga</li>
+                  <li class="mb-1"><i class="bi bi-check-circle-fill text-info me-2"></i>Análisis de métricas</li>
+                  <li class="mb-1"><i class="bi bi-check-circle-fill text-info me-2"></i>Integración Grafana</li>
+                  <li class="mb-1"><i class="bi bi-check-circle-fill text-info me-2"></i>Identificar cuellos de botella</li>
+                  <li class="mb-1"><i class="bi bi-check-circle-fill text-info me-2"></i>Pruebas de estrés</li>
+                </ul>
+              </div>
+              
+              <div class="d-grid gap-2 mt-auto">
+                <a href="#" class="btn btn-outline-info">
+                  <i class="bi bi-file-earmark-pdf me-2"></i> Certificado
+                </a>
+                <a href="#" class="btn btn-outline-light">
+                  <i class="bi bi-link-45deg me-2"></i> Ver Curso
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
 
-<!-- CERTIFICACIONES -->
-<section id="certifications" class="certifications-section my-5">
-  <h2 class="certifications-title text-center text-white">Certificaciones</h2>
-  
-  <div class="certifications-container d-flex flex-wrap gap-4 justify-content-center bg-dark" >
-    <!-- Tarjeta 1 -->
-    <div class="certification-card bg-dark text-white border rounded shadow p-4" style="flex: 1 1 calc(33% - 16px);" tabindex="0">
-      <h3 class="certification-name">Certificado de Cypress</h3>
-      <p class="certification-issuer">Udemy</p>
-      <p class="certification-date">Febrero 2025</p>
-      <p class="certification-description">
-        Cypress: Pruebas de Automatización Web de Cero a Héroe.
-      </p>
-      <a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-df403fb7-082a-4d7f-b883-41281b42fd96.pdf" 
-         class="btn btn-outline-light mt-2 d-inline-flex align-items-center" 
-         target="_blank" 
-         rel="noopener noreferrer">
-        <i class="bi bi-eye me-1"></i> Ver Certificado
-      </a>
-    </div>
-
-    <!-- Tarjeta 2 -->
-    <div class="certification-card bg-dark text-white border rounded shadow p-4" style="flex: 1 1 calc(33% - 16px);" tabindex="0">
-      <h3 class="certification-name">Certificado de K6</h3>
-      <p class="certification-issuer">Udemy</p>
-      <p class="certification-date">Marzo 2025</p>
-      <p class="certification-description">
-        Curso de pruebas de rendimiento con K6: desde lo básico hasta pruebas avanzadas.
-      </p>
-      <a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-ejemplo-k6.pdf" 
-         class="btn btn-outline-light mt-2 d-inline-flex align-items-center" 
-         target="_blank" 
-         rel="noopener noreferrer">
-        <i class="bi bi-eye me-1"></i> Ver Certificado
-      </a>
-    </div>
-
-    <!-- Tarjeta 3 -->
-    <div class="certification-card bg-dark text-white border rounded shadow p-4" style="flex: 1 1 calc(33% - 16px);" tabindex="0">
-      <h3 class="certification-name">Fundamentos de Testing</h3>
-      <p class="certification-issuer">Platzi</p>
-      <p class="certification-date">Enero 2025</p>
-      <p class="certification-description">
-        Fundamentos del testing de software, técnicas de prueba manual y automatización.
-      </p>
-      <a href="https://platzi.com/certificado-ejemplo" 
-         class="btn btn-outline-light mt-2 d-inline-flex align-items-center" 
-         target="_blank" 
-         rel="noopener noreferrer">
-        <i class="bi bi-eye me-1"></i> Ver Certificado
-      </a>
+        <!-- Certificación 3 - Testing -->
+        <div class="carousel-item">
+          <div class="col-12 col-lg-10 col-xl-8 mx-auto">
+            <div class="cert-card bg-dark text-white p-4 h-100 rounded-4 border border-info border-opacity-25">
+              <div class="d-flex justify-content-between align-items-start mb-3">
+                <img src="https://static.platzi.com/media/achievements/badge-fundamentos-testing.png" alt="Testing" style="height: 60px;">
+                <div class="platform-info ms-3">
+                  <img src="../portafolio-edwin-standalone/imgs/stock-vector-software-testing-and-automation-logo-1539151892.jpeg" alt="Platzi" style="height: 25px;" class="mb-2">
+                  <div class="badge bg-info text-dark fs-6">Ene 2023</div>
+                </div>
+              </div>
+              
+              <h3 class="text-info mb-3">Fundamentos de Testing</h3>
+              
+              <p class="mb-3">Fundamentos esenciales de testing de software y metodologías ágiles.</p>
+              
+              <div class="skills-list mb-3">
+                <h6 class="text-muted">Habilidades:</h6>
+                <ul class="list-unstyled">
+                  <li class="mb-1"><i class="bi bi-check-circle-fill text-info me-2"></i>Pruebas manuales</li>
+                  <li class="mb-1"><i class="bi bi-check-circle-fill text-info me-2"></i>Casos de prueba</li>
+                  <li class="mb-1"><i class="bi bi-check-circle-fill text-info me-2"></i>Reporte y seguimiento de bugs</li>
+                  <li class="mb-1"><i class="bi bi-check-circle-fill text-info me-2"></i>Ciclo de pruebas</li>
+                  <li class="mb-1"><i class="bi bi-check-circle-fill text-info me-2"></i>Técnicas de pruebas</li>
+                </ul>
+              </div>
+              
+              <div class="d-grid gap-2 mt-auto">
+                <a href="#" class="btn btn-outline-info">
+                  <i class="bi bi-file-earmark-pdf me-2"></i> Certificado
+                </a>
+                <a href="#" class="btn btn-outline-light">
+                  <i class="bi bi-link-45deg me-2"></i> Ver Curso
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Controles del carrusel -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#certificationsCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#certificationsCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
     </div>
   </div>
 </section>
 
 
-  
-
- 
 
 
-<!-- CONTACTO -->
+ <!-- FORMULARIO DE CONTACTO FUNCIONAL -->
 <section id="contact" class="container my-5">
   <h2 class="contact-title">Contáctame</h2>
-<h3 class="text-center">¿Tienes alguna pregunta o quieres trabajar conmigo?</h3><br>
+  <h3 class="text-center mb-4">¿Tienes alguna pregunta o quieres trabajar conmigo?</h3>
+  
   <!-- Botones de contacto -->
-  <div class="mb-4">
-    <a href="mailto:edwin.tuemail@example.com" class="btn btn-primary me-2" title="Envíame un correo">Contacto por Email</a>
-    
-    <a href="https://github.com/edwin554" class="btn btn-outline-light me-2" target="_blank" title="Visita mi perfil de GitHub">
-      <i class="bi bi-github me-1"></i> GitHub
+  <div class="d-flex flex-wrap justify-content-center gap-3 mb-5">
+    <a href="mailto:tuemail@ejemplo.com" class="btn btn-primary" title="Envíame un correo">
+      <i class="bi bi-envelope me-2"></i> Email
     </a>
-    
-    <a href="https://www.linkedin.com/in/edwin-chavarro-trujillo/" class="btn btn-outline-primary me-2" target="_blank" title="Visita mi perfil de LinkedIn">
-      <i class="bi bi-linkedin me-1"></i> LinkedIn
+    <a href="https://github.com/edwin554" class="btn btn-outline-light" target="_blank" title="GitHub">
+      <i class="bi bi-github me-2"></i> GitHub
     </a>
-    
-    <a href="https://wa.me/573222732366" class="btn btn-success me-2" target="_blank" title="Escríbeme por WhatsApp">
-      <i class="bi bi-whatsapp me-1"></i> WhatsApp
+    <a href="https://www.linkedin.com/in/edwin-chavarro-trujillo/" class="btn btn-outline-primary" target="_blank" title="LinkedIn">
+      <i class="bi bi-linkedin me-2"></i> LinkedIn
     </a>
-
-    <!-- Botón para descargar CV -->
-    <a href="../portafolio-edwin-standalone/cv-edwin-chavarro.pdf" class="btn btn-danger" download="../portafolio-edwin-standalone/cv-edwin-chavarro.pdf" title="Haz clic para descargar">
-      <i class="bi bi-file-earmark-pdf me-1"></i> Descargar CV
+    <a href="https://wa.me/573222732366" class="btn btn-success" target="_blank" title="WhatsApp">
+      <i class="bi bi-whatsapp me-2"></i> WhatsApp
+    </a>
+    <a href="../portafolio-edwin-standalone/cv-edwin-chavarro.pdf" class="btn btn-danger" download title="Descargar CV">
+      <i class="bi bi-file-earmark-pdf me-2"></i> CV
     </a>
   </div>
 
-  <!-- Formulario de contacto -->
-  <form action="tu-script-de-contacto.php" method="POST">
-    <div class="mb-3">
-      <label for="name" class="form-label">Nombre</label>
-      <input type="text" class="form-control" id="name" required />
+  <!-- Formulario con Formspree -->
+  <form id="contactForm" action="https://formspree.io/f/mqaprpqn" method="POST" class="needs-validation" novalidate>
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <label for="name" class="form-label">Nombre completo *</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+        <div class="invalid-feedback">Por favor ingresa tu nombre</div>
+      </div>
+      
+      <div class="col-md-6 mb-3">
+        <label for="email" class="form-label">Correo electrónico *</label>
+        <input type="email" class="form-control" id="email" name="_replyto" required>
+        <div class="invalid-feedback">Por favor ingresa un email válido</div>
+      </div>
     </div>
+    
     <div class="mb-3">
-      <label for="email" class="form-label">Correo electrónico</label>
-      <input type="email" class="form-control" id="email" required />
+      <label for="subject" class="form-label">Asunto</label>
+      <input type="text" class="form-control" id="subject" name="_subject">
     </div>
+    
     <div class="mb-3">
-      <label for="message" class="form-label">Mensaje</label>
-      <textarea class="form-control" id="message" rows="4" required></textarea>
+      <label for="message" class="form-label">Mensaje *</label>
+      <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+      <div class="invalid-feedback">Por favor escribe tu mensaje</div>
     </div>
-    <button type="submit" class="btn btn-primary">Enviar</button>
+    
+    <input type="hidden" name="_next" value="https://tudominio.com/gracias.html">
+    <input type="text" name="_gotcha" style="display:none">
+    
+    <div class="d-grid">
+      <button type="submit" class="btn btn-primary btn-lg">
+        <span id="submitText">Enviar mensaje</span>
+        <span id="spinner" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+      </button>
+    </div>
+    
+    <div id="formAlert" class="alert alert-success mt-3 d-none" role="alert">
+      ¡Mensaje enviado con éxito! Me pondré en contacto contigo pronto.
+    </div>
   </form>
 </section>
+
 
 
 
