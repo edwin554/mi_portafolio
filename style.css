@@ -1,0 +1,295 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background: #333;
+  color: #fafbfc;
+}
+img {
+  margin-bottom: 20px; /* Ajusta el valor según el espacio que necesites */
+}
+
+
+  .card:hover {
+    transform:scale(1.10) translateY(-20px); /* Efecto de elevación al pasar el mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más prominente */
+  }
+  .custom-hero-section {
+    background-image: url('../portafolio-edwin-standalone/imagenpc.png'); /* actualiza esta ruta */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 80%;
+    margin: auto;
+    height: 130vh; /* puedes ajustar */
+    position: relative;
+  }
+  .text-justify {
+    text-align: justify;
+  }
+  .img-perfil {
+    width: 150px;
+    height: 150px;
+    object-fit: scale-down; /* Mantiene la proporción de la imagen */
+    border-radius: 50%;  /* Hace que sea circular */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* sombra suave para destacar */
+    margin: 40px auto; /* centrado */
+  }
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease-out forwards;
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+  .custom-hero-overlay {
+    
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+  .scroll-btn {
+    padding: 10px 20px;
+    background-color: #0dcaf0;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+  }
+  
+  .scroll-btn:hover {
+    transform: scale(1.1);
+  }
+  
+
+.title-experience {
+  font-size: 2rem;
+  color: #27a0e6;
+  text-align: center;
+  margin-top: 1rem;
+}
+header {
+  background: #222;
+  color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+.d-flex{
+  background-color: #303131;
+}
+.container-links {
+  display: flex; /* Cambié display: -moz-deck por display: flex */
+  justify-content: space-between; /* Alinea los elementos con espacio igual entre ellos */
+  align-items: center; /* Centra verticalmente los elementos */
+  flex-direction: row; /* Los coloca en una fila */
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #303131;
+}
+
+.container-links a {
+  margin-right: 1rem; /* Agrega espacio entre los enlaces */
+  
+}
+
+.container-links img {
+  margin-left: 1.5rem; /* Agrega espacio entre los iconos */
+}
+
+.container-links .social-icons {
+  display: flex; /* Utilizamos flex para alinear los iconos en una fila */
+  align-items: center; /* Centra los iconos verticalmente */
+  font-size: 2rem; /* Tamaño de fuente para los enlaces */
+}
+
+.card {
+  background-color: #1f1f1f;
+  border: 1px solid #333;
+  color: white;
+  min-height: 400px;
+  font-size: 0.95rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  height: auto;
+}
+.card:hover {
+  transform: scale(1.03);
+}
+.carousel-item .col-md-5 {
+  flex: 0 0 auto;
+  width: 45%; /* puedes ajustar a 48% o 50% si quieres más margen */
+}
+.card-title {
+  color: #27a0e6; /* color de Bootstrap para títulos */
+}
+/* Agrandar tarjeta seleccionada */
+.card-enlarged {
+  transform: scale(1.55);
+  z-index: 10;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+header h1 {
+  margin: 0;
+}
+p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+.tagline {
+  font-style: italic;
+  color: #ccc;
+}
+
+section {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.section-title {
+  color: #444;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #222;
+  color: #fff;
+}
+/* Menú de navegación */
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.navbar li {
+  display: inline;
+}
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  background: #444;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+.navbar a:hover {
+  background: #666;
+}
+/* Navbar estructura */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.certifications-title {
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+.certification-card {
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.3s ease;
+}
+
+.certification-card:hover {
+  transform: scale(1.03);
+  background-color: #1a1a1a;
+}
+
+
+.menu-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-links li {
+  display: inline;
+}
+
+.nav-links a {
+  color: #27a0e6;
+  text-decoration: none;
+  font-weight:  bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s, color 0.3s;
+  border-radius: 5px;
+}
+
+.menu-links a:hover {
+  background-color: #2d66b4;
+  color: #facc15;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+}
+
+/* Social icons */
+.social-links a {
+  margin-left: 1rem;
+/* Footer */
+  text-decoration: none;
+  color: #27a0e6;
+  transition: color 0.3s;
+  display: inline-block;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background: #27a0e6;
+  border: 1px solid transparent;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.contact-title {
+  color: #27a0e6;
+  font-size: 28px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.social-links img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.2s ease;
+}
+
+.social-links img:hover {
+  transform: scale(1.2);
+}
