@@ -9,7 +9,14 @@ body {
 img {
   margin-bottom: 20px; /* Ajusta el valor según el espacio que necesites */
 }
-
+#MyPortafolio{
+ 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #a1e1fc !important; /* Color original */
+    padding: 1rem 0;
+}
 
   .card:hover {
     transform:scale(1.10) translateY(-20px); /* Efecto de elevación al pasar el mouse */
@@ -571,4 +578,26 @@ footer {
   background-color: #008c94;
   border-color: #008c94;
   transform: translateY(-2px);
+}
+}
+/* Estilos para el contador de visitas */
+.visit-counter {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 5px 12px;
+  display: inline-block;
+  font-size: 0.9rem;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.visit-counter:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Estilo para el número de visitas */
+[data-goatcounter-visit] {
+  font-weight: bold;
+  color: #4dabf7; /* Color azul claro (cambiable) */
 }
