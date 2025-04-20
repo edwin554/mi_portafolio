@@ -620,15 +620,36 @@
   </div>
 </footer>
 
-  <!-- Bootstrap Bundle JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-  <!-- Enlazamos el archivo JavaScript -->
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 <script src="scripts.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
   AOS.init();
 </script>
+
+<!-- GoatCounter Script MEJORADO -->
 <script data-goatcounter="https://edwinchavarrotrujillo.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+        data-goatcounter-settings='{"allow_local": true, "no_onload": false}'
+        async src="//gc.zgo.at/count.v3.js"></script>
+
+<!-- Script de respaldo para asegurar el conteo -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Verifica después de 3 segundos si el contador sigue en 0
+    setTimeout(function() {
+      const counterElement = document.querySelector('[data-goatcounter-visit]');
+      if (counterElement && counterElement.textContent === '0') {
+        // Intenta forzar el conteo manualmente
+        if (window.goatcounter && typeof window.goatcounter.count === 'function') {
+          window.goatcounter.count({
+            path: window.location.pathname,
+            event: true
+          });
+        }
+      }
+    }, 3000);
+  });
+</script>
 </body>
 </html>
