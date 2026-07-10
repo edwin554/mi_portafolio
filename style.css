@@ -3,8 +3,8 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background: #333;
-  color: #fafbfc;
+  background: #111827;
+  color: #F9FAFB;
 }
 img {
   margin-bottom: 20px; /* Ajusta el valor según el espacio que necesites */
@@ -14,7 +14,7 @@ img {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: #a1e1fc !important; /* Color original */
+    background-color: #06B6D4 !important;
     padding: 1rem 0;
 }
 
@@ -41,7 +41,7 @@ img {
 .profile-pic {
   width: 100%;
   height: auto;
-  border: 5px solid #00adb5;
+  border: 5px solid #06B6D4;
   transition: all 0.3s ease;
   position: relative;
   z-index: 1;
@@ -49,14 +49,14 @@ img {
 
 .profile-pic:hover {
   transform: scale(1.03);
-  box-shadow: 0 10px 25px rgba(0, 173, 181, 0.3);
+  box-shadow: 0 10px 25px rgba(6, 182, 212, 0.3);
 }
 
 .profile-badge {
   position: absolute;
   bottom: -15px;
   right: -15px;
-  background: #303131;
+  background: #1F2937;
   color: white;
   padding: 8px 15px;
   border-radius: 30px;
@@ -64,11 +64,11 @@ img {
   font-weight: 600;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   z-index: 2;
-  border: 2px solid #00adb5;
+  border: 2px solid #06B6D4;
 }
 
 .profile-badge i {
-  color: #00adb5;
+  color: #06B6D4;
   margin-right: 5px;
 }
 
@@ -78,7 +78,7 @@ img {
   position: absolute;
   width: calc(100% + 20px);
   height: calc(100% + 20px);
-  border: 2px dashed rgba(0, 173, 181, 0.6);
+  border: 2px dashed rgba(6, 182, 212, 0.6);
   border-radius: 50%;
   top: -10px;
   left: -10px;
@@ -131,29 +131,29 @@ img {
 
 .title-experience {
   font-size: 2rem;
-  color: #27a0e6;
+  color: #06B6D4;
   text-align: center;
   margin-top: 1rem;
 }
 header {
-  background: #222;
+  background: #1F2937;
   color: #fff;
   padding: 2rem;
   text-align: center;
 }
 .d-flex{
-  background-color: #303131;
+  background-color: #1F2937;
 }
 .container-links {
-  display: flex; /* Cambié display: -moz-deck por display: flex */
-  justify-content: space-between; /* Alinea los elementos con espacio igual entre ellos */
-  align-items: center; /* Centra verticalmente los elementos */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
-  gap: 1rem; /* Espacio entre los elementos */
+  gap: 1rem;
   margin-top: 2rem;
   padding: 1rem;
   border-radius: 10px;
-  background-color: #303131;
+  background-color: #1F2937;
 
 }
 /* Grupo de botones de navegación (izquierda) */
@@ -222,9 +222,9 @@ header {
 
 
 .card {
-  background-color: #1f1f1f;
-  border: 1px solid #333;
-  color: white;
+  background-color: #1F2937;
+  border: 1px solid #374151;
+  color: #F9FAFB;
   min-height: 400px;
   font-size: 0.95rem;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
@@ -236,10 +236,10 @@ header {
 }
 .carousel-item .col-md-5 {
   flex: 0 0 auto;
-  width: 45%; /* puedes ajustar a 48% o 50% si quieres más margen */
+  width: 45%;
 }
 .card-title {
-  color: #27a0e6; /* color de Bootstrap para títulos */
+  color: #06B6D4;
 }
 /* Agrandar tarjeta seleccionada */
 .card-enlarged {
@@ -268,14 +268,14 @@ section {
 }
 
 .section-title {
-  color: #444;
+  color: #9CA3AF;
 }
 
 footer {
   text-align: center;
   padding: 1rem;
-  background: #222;
-  color: #fff;
+  background: #1F2937;
+  color: #F9FAFB;
 }
 /* Menú de navegación */
 .navbar ul {
@@ -293,8 +293,8 @@ footer {
   
   /* Colores base */
   
-  color: #2fa3ff;
-  background:linear-gradient(145deg,#2d2d2d 0%,#232323 50%,#1a1a1a 90%,rgba(25, 203, 242, 0.15) 100%);
+  color: #06B6D4;
+  background:linear-gradient(145deg,#1F2937 0%,#111827 50%,#0F172A 90%,rgba(6, 182, 212, 0.15) 100%);
  
   /* Estilos de texto */
   padding: 15px 30px;
@@ -311,20 +311,20 @@ footer {
   transform: translateY(0);
   box-shadow: 
     0 4px 15px rgba(0,0,0,0.2),
-    0 0 0 0px rgba(47, 163, 255, 0);
+    0 0 0 0px rgba(6, 182, 212, 0);
 
 }
 
 .nav-btn:hover {
-    background-color: #383838;
-    color: #38b6ff;
+    background-color: #374151;
+    color: #22D3EE;
     transform: translateY(-3px);
     box-shadow: 
-      0 8px 25px rgba(47, 163, 255, 0.25),
-      0 0 0 1px rgba(47, 163, 255, 0.15);
+      0 8px 25px rgba(6, 182, 212, 0.25),
+      0 0 0 1px rgba(6, 182, 212, 0.15);
     
     /* Efecto neón sutil */
-    text-shadow: 0 0 8px rgba(47, 163, 255, 0.3);
+    text-shadow: 0 0 8px rgba(6, 182, 212, 0.3);
   }
   
   /* Efecto al hacer clic */
@@ -332,7 +332,7 @@ footer {
     transform: translateY(1px);
     transition: all 0.1s ease;
     box-shadow: 
-      0 2px 8px rgba(47, 163, 255, 0.15),
+      0 2px 8px rgba(6, 182, 212, 0.15),
       inset 0 2px 4px rgba(0,0,0,0.2);
   }
   
@@ -371,37 +371,37 @@ footer {
 }
 .skill-name {
   font-weight: 600;
-  color: #fff;
+  color: #F9FAFB;
   display: flex;
   align-items: center;
 }
 
 .skill-percent {
-  color: #00adb5;
+  color: #06B6D4;
   font-weight: bold;
 }
 
 .progress {
-  background-color: #303131;
+  background-color: #374151;
   border-radius: 4px;
   overflow: hidden;
 }
 
 .progress-bar {
-  background-color: #00adb5;
+  background-color: #06B6D4;
   transition: width 1.5s ease-in-out;
 }
 
 
 /* Estilos para certificaciones en fila */
 .certifications-wide {
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background: linear-gradient(135deg, #111827, #1F2937, #374151);
 }
 
 .cert-wide {
   transition: all 0.3s ease;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-  min-width: 350px; /* Ancho mínimo para mantener tamaño */
+  min-width: 350px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -410,7 +410,7 @@ footer {
 
 .cert-wide:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 173, 181, 0.3);
+  box-shadow: 0 10px 30px rgba(6, 182, 212, 0.3);
 }
 
 /* Scroll horizontal solo en móviles */
@@ -474,7 +474,7 @@ footer {
 }
 
 .nav-links a {
-  color: #27a0e6;
+  color: #06B6D4;
   text-decoration: none;
   font-weight:  bold;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -489,8 +489,8 @@ footer {
 }
 
 .menu-links a:hover {
-  background-color: #2d66b4;
-  color: #facc15;
+  background-color: #0891B2;
+  color: #F9FAFB;
   text-decoration: none;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   transform: translateY(-2px);
@@ -504,17 +504,17 @@ footer {
 .social-links a {
   margin-left: 1rem;
   text-decoration: none;
-  color: #27a0e6;
+  color: #06B6D4;
   transition: color 0.3s;
   display: inline-block;
   padding: 0.5rem;
   border-radius: 5px;
-  background: #27a0e6;
+  background: #06B6D4;
   border: 1px solid transparent;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 .contact-title {
-  color: #27a0e6;
+  color: #06B6D4;
   font-size: 28px;
   margin-bottom: 10px;
   text-transform: uppercase;
@@ -537,62 +537,112 @@ footer {
   max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
-  background-color: rgba(48, 49, 49, 0.7);
+  background-color: rgba(31, 41, 55, 0.7);
   border-radius: 10px;
-  border: 1px solid rgba(0, 173, 181, 0.3);
+  border: 1px solid rgba(6, 182, 212, 0.3);
 }
 
 #contactForm:hover {
-  border-color: #00adb5;
+  border-color: #06B6D4;
 }
 
 #contactForm .form-control {
-  background-color: #303131;
-  border: 1px solid #495057;
-  color: white;
+  background-color: #1F2937;
+  border: 1px solid #374151;
+  color: #F9FAFB;
 }
 
 #contactForm .form-control:focus {
-  background-color: #303131;
-  border-color: #00adb5;
-  color: white;
-  box-shadow: 0 0 0 0.25rem rgba(0, 173, 181, 0.25);
+  background-color: #1F2937;
+  border-color: #06B6D4;
+  color: #F9FAFB;
+  box-shadow: 0 0 0 0.25rem rgba(6, 182, 212, 0.25);
 }
 
 #contactForm .invalid-feedback {
-  color: #ff6b6b;
+  color: #F87171;
 }
 
 #contactForm .btn-primary {
-  background-color: #00adb5;
-  border-color: #00adb5;
+  background-color: #06B6D4;
+  border-color: #06B6D4;
   transition: all 0.3s ease;
 }
 
 #contactForm .btn-primary:hover {
-  background-color: #008c94;
-  border-color: #008c94;
+  background-color: #0891B2;
+  border-color: #0891B2;
   transform: translateY(-2px);
 }
 }
 /* Estilos para el contador de visitas */
 .visit-counter {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(6, 182, 212, 0.1);
   border-radius: 20px;
   padding: 5px 12px;
   display: inline-block;
   font-size: 0.9rem;
   backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(6, 182, 212, 0.2);
   transition: all 0.3s ease;
 }
 
 .visit-counter:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(6, 182, 212, 0.2);
 }
 
 /* Estilo para el número de visitas */
 [data-goatcounter-visit] {
   font-weight: bold;
-  color: #4dabf7; /* Color azul claro (cambiable) */
+  color: #22D3EE;
+}
+
+/* ===== Validaciones en tiempo real del formulario ===== */
+.form-control.is-valid-custom {
+  border-color: #198754;
+  background-image: none;
+}
+
+.form-control.is-invalid-custom {
+  border-color: #dc3545;
+  background-image: none;
+}
+
+.feedback-message {
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  display: none;
+}
+
+.feedback-message.show {
+  display: block;
+}
+
+.feedback-message.error {
+  color: #F87171;
+}
+
+.feedback-message.success {
+  color: #10B981;
+}
+
+.char-counter {
+  font-size: 0.75rem;
+  color: #9CA3AF;
+  text-align: right;
+  margin-top: 0.25rem;
+}
+
+.char-counter.warning {
+  color: #FBBF24;
+}
+
+.char-counter.danger {
+  color: #F87171;
+}
+
+.form-control:disabled,
+.form-control:readonly {
+  background-color: #1F2937;
+  opacity: 0.7;
 }
