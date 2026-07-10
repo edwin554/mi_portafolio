@@ -18,19 +18,9 @@ img {
     padding: 1rem 0;
 }
 
-  .custom-hero-section {
-    background-image: url('./imagenpc.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 80%;
-    margin: auto;
-    height: 130vh; /* puedes ajustar */
-    position: relative;
-  }
-  .text-justify {
-    text-align: justify;
-  }
+.text-justify {
+  text-align: justify;
+}
   /* Estilos para la imagen de perfil profesional */
 .profile-pic-container {
   position: relative;
@@ -645,4 +635,154 @@ footer {
 .form-control:readonly {
   background-color: #1F2937;
   opacity: 0.7;
+}
+
+/* ===== ANIMACIONES Y EFECTOS ===== */
+
+/* Efecto parallax en Hero */
+.custom-hero-section {
+  background-image: url('./imagenpc.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 80%;
+  margin: auto;
+  height: 130vh;
+  position: relative;
+}
+
+/* Hover 3D en tarjetas de herramientas */
+.tool-card {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.tool-card:hover {
+  transform: translateY(-15px) rotateX(5deg);
+  box-shadow: 
+    0 25px 50px rgba(6, 182, 212, 0.3),
+    0 0 0 1px rgba(6, 182, 212, 0.2);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.tool-card:hover img {
+  transform: scale(1.1) rotateY(10deg);
+  transition: transform 0.4s ease;
+}
+
+.tool-card img {
+  transition: transform 0.3s ease;
+}
+
+/* Barras de progreso animadas */
+.skill-item .progress-bar {
+  transform-origin: left;
+  transform: scaleX(0);
+  animation: progressFill 1.5s ease-out forwards;
+}
+
+@keyframes progressFill {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Animación del contador de visitas */
+#visitCount {
+  display: inline-block;
+  animation: countPulse 2s ease-in-out infinite;
+}
+
+@keyframes countPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+    color: #22D3EE;
+  }
+}
+
+/* Hover en tarjetas del carrusel */
+#projectsCarousel .card {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#projectsCarousel .card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(6, 182, 212, 0.25);
+}
+
+/* Animación para badges de habilidades */
+.badge {
+  transition: all 0.3s ease;
+}
+
+.badge:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 5px 15px rgba(6, 182, 212, 0.4);
+}
+
+/* Efecto glow en botones de navegación */
+.nav-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(6, 182, 212, 0.4), transparent);
+  transition: left 0.5s ease;
+}
+
+.nav-btn:hover::before {
+  left: 100%;
+}
+
+/* Animación de escritura para el título del Hero */
+.custom-hero-overlay h1 {
+  overflow: hidden;
+  border-right: 3px solid #06B6D4;
+  white-space: nowrap;
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #06B6D4 }
+}
+
+/* Scroll suave con sombra */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animación para el footer */
+footer {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
