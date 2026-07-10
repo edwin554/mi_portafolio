@@ -276,3 +276,49 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+// Animación de contadores
+document.addEventListener('DOMContentLoaded', function() {
+  const counters = document.querySelectorAll('.counter-number');
+  let animated = false;
+
+  function animateCounters() {
+    if (animated) return;
+    
+    const section = document.getElementById('featured-projects');
+    if (!section) return;
+    
+    const rect = section.getBoundingClientRect();
+    const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+    
+    if (isVisible) {
+      animated = true;
+      
+      counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-target'));
+        const duration = 2000;
+        const step = target / (duration / 16);
+        let current = 0;
+        
+        const updateCounter = () => {
+          current += step;
+          if (current < target) {
+            counter.textContent = Math.floor(current).toLocaleString('es-CL');
+            requestAnimationFrame(updateCounter);
+          } else {
+            counter.textContent = target.toLocaleString('es-CL');
+            if (target === 4) counter.textContent = '+4';
+            else if (target === 1500) counter.textContent = '+1.500';
+            else if (target === 20) counter.textContent = '+20';
+            else if (target === 30) counter.textContent = '30%';
+          }
+        };
+        
+        updateCounter();
+      });
+    }
+  }
+
+  window.addEventListener('scroll', animateCounters);
+  animateCounters();
+});
