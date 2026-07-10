@@ -18,12 +18,8 @@ img {
     padding: 1rem 0;
 }
 
-  .card:hover {
-    transform:scale(1.10) translateY(-20px); /* Efecto de elevación al pasar el mouse */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más prominente */
-  }
   .custom-hero-section {
-    background-image: url('../portafolio-edwin-standalone/imagenpc.png'); /* actualiza esta ruta */
+    background-image: url('./imagenpc.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -507,7 +503,6 @@ footer {
 /* Social icons */
 .social-links a {
   margin-left: 1rem;
-/* Footer */
   text-decoration: none;
   color: #27a0e6;
   transition: color 0.3s;
@@ -536,8 +531,8 @@ footer {
 .social-links img:hover {
   transform: scale(1.2);
 }
-  }
-  /* Estilos para el formulario */
+
+/* Estilos para el formulario */
 #contactForm {
   max-width: 800px;
   margin: 0 auto;

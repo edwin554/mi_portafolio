@@ -3,19 +3,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
     document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
-  });
-});
-// scripts.js
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault(); // Prevenir el comportamiento por defecto del enlace (ir a la sección de forma inmediata)
-    
-    // Desplazarse a la sección con un desplazamiento suave
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth', // La animación de desplazamiento
-      block: 'start' // Alinea la sección al inicio de la ventana
+      behavior: 'smooth',
+      block: 'start'
     });
   });
 });
@@ -68,8 +57,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
   cards.forEach(card => {
     card.addEventListener('click', () => {
-      cards.forEach(c => c.classList.remove('active'));
-      card.classList.add('active');
+      // Si ya está activa, desactívala; si no, activa solo esta
+      if (card.classList.contains('active')) {
+        card.classList.remove('active');
+      } else {
+        cards.forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+      }
     });
   });
 });
